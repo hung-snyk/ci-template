@@ -1,13 +1,14 @@
 name: Template Workflow
 
-on: workflow_call
+on: 
+    workflow_call:
     # inputs:
     #   token:
     #     required: true
     #     type: string
 
 jobs:
-  build:
+  Setup-and-run-snyk:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
