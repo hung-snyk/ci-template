@@ -18,7 +18,8 @@ jobs:
         uses: actions/setup-node@v2
 
       - name: Install Snyk CLI
-        run: npm install -g snyk\
+        run: |
+            npm install -g snyk\
             echo $SNYK_TOKEN
 
       - name: Authenticate Snyk
