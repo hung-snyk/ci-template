@@ -22,9 +22,8 @@ jobs:
       - name: Authenticate Snyk
         # env:
         #   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: |
-            export SNYK_TOKEN=${{ secrets.SNYK_TOKEN }}
-            snyk auth $SNYK_TOKEN --auth-type=token
+        run: snyk auth $SNYK_TOKEN --auth-type=token
+            # export SNYK_TOKEN=${{ secrets.SNYK_TOKEN }}
     
       - name: Run Snyk Code Test
         run: snyk code test
