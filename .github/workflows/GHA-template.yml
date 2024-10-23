@@ -2,10 +2,9 @@ name: Template Workflow
 
 on: 
     workflow_call:
-      inputs:
+      secrets:
         SNYK_TOKEN:
           required: true
-          type: string
 
 jobs:
   Setup-and-run-snyk:
