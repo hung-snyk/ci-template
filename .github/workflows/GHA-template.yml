@@ -1,7 +1,7 @@
 name: Template Workflow
 
-on: workflow_dispatch
-    # workflow_call:
+on: 
+    workflow_call:
     # inputs:
     #   token:
     #     required: true
@@ -18,9 +18,7 @@ jobs:
         uses: actions/setup-node@v2
 
       - name: Install Snyk CLI
-        run: |
-            npm install -g snyk
-            echo $SNYK_TOKEN
+        run: npm install -g snyk
 
       - name: Authenticate Snyk
         env:
