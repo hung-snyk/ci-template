@@ -2,6 +2,10 @@ name: Template Workflow
 
 on: 
     workflow_call:
+      inputs:
+        flag:
+          required: false
+          type: string
       secrets:
         SNYK_TOKEN:
           required: true
@@ -29,5 +33,5 @@ jobs:
         continue-on-error: true
 
       - name: Run Snyk Open Source Test
-        run: snyk test
+        run: snyk test $flag
         continue-on-error: true
