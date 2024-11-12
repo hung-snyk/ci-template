@@ -35,3 +35,7 @@ jobs:
       - name: Run Snyk Open Source Test
         run: snyk test ${{ inputs.flag }}
         continue-on-error: true
+
+      - name: Run Snyk Container Test
+        run: snyk container
+        continue-on-error: true
